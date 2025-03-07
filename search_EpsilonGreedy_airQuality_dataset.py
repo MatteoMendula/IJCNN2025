@@ -90,7 +90,7 @@ if __name__ == '__main__':
     xtrain = scaler.fit_transform(xtrain)
     xtest = scaler.transform(xtest)
 
-    n_iterations = 1
+    n_iterations = 20
     searcher = EpsilonGreedyReservoirHPSearch_R2(xtrain, ytrain, xtest, ytest, n_iterations)
     start_time = time.time()
     best_params, best_score = searcher.search(n_iterations)

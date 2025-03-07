@@ -104,7 +104,7 @@ if __name__ == '__main__':
     target_test1 = target_test1[:, np.newaxis] 
     target_test2 = target_test2[:, np.newaxis] 
 
-    n_iterations = 1
+    n_iterations = 20
     searcher = EpsilonGreedyReservoirHPSearch_F1(features_scaled_train, target_train, features_scaled_test1, target_test1, n_iterations, 0.3)
     start_time = time.time()
     best_params, best_score = searcher.search(n_iterations=n_iterations)
